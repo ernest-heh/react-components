@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 function Accordion({ items }) {
-  const [expandedIndex, setExpandedIndex] = useState(-1);
+  const [expandedIndex, setExpandedIndex] = useState(0);
 
   // Define event handler outside mapping function, with index as argument
   const handleClick = (nextIndex) => {

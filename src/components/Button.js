@@ -1,4 +1,5 @@
 import className from "classnames";
+import { twMerge } from "tailwind-merge";
 
 function Button({
   children,
@@ -11,7 +12,7 @@ function Button({
   rounded,
   ...rest
 }) {
-  const classes = className(
+  let classes = className(
     rest.className,
     "flex items-center px-3 py-1.5 border",
     {
@@ -29,6 +30,8 @@ function Button({
       "text-red-500": outline && danger,
     }
   );
+
+  classes = twMerge(classes);
 
   return (
     <button {...rest} className={classes}>
