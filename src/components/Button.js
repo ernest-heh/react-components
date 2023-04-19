@@ -1,4 +1,4 @@
-import className from "classnames";
+import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
 function Button({
@@ -12,7 +12,7 @@ function Button({
   rounded,
   ...rest
 }) {
-  let classes = className(
+  let classes = classNames(
     rest.className,
     "flex items-center px-3 py-1.5 border",
     {
