@@ -5,7 +5,7 @@ function ButtonPage() {
   return (
     <div>
       <div>
-        <Button success rounded className="mb-4">
+        <Button success rounded outline className="mb-4">
           <GoBell />
           Click Me!
         </Button>
@@ -20,7 +20,9 @@ function ButtonPage() {
         <Button warning>Add to Cart</Button>
       </div>
       <div>
-        <Button secondary>Search</Button>
+        <Button secondary outline>
+          Search
+        </Button>
       </div>
       <div>
         <Button primary rounded>
