@@ -5,7 +5,7 @@ function ButtonPage() {
   return (
     <div>
       <div>
-        <Button success rounded outline className="mb-4">
+        <Button success rounded outline>
           <GoBell />
           Click Me!
         </Button>
