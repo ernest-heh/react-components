@@ -1,3 +1,4 @@
+import { produce } from "immer";
 import { useReducer } from "react";
 import Button from "../components/Button";
 import Panel from "../components/Panel";
@@ -41,7 +42,7 @@ const reducer = (state, action) => {
 };
 
 function CounterPage({ initialCount }) {
-  const [state, dispatch] = useReducer(reducer, {
+  const [state, dispatch] = useReducer(produce(reducer), {
     count: initialCount,
     valueToAdd: 0,
   });
@@ -81,8 +82,8 @@ function CounterPage({ initialCount }) {
     <Panel className="m-3">
       <h1 className="text-lg">Count is {state.count}</h1>
       <div className="flex flex-row">
-        <Button onClick={increment}>Increment</Button>
-        <Button onClick={decrement}>Decrement</Button>
+        <Button onClick={increment}>+</Button>
+        <Button onClick={decrement}>-</Button>
       </div>
 
       <form onSubmit={handleSubmit}>
